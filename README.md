@@ -1,39 +1,52 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+#Emerald Eye
 
-Welcome,
+![Logo](./assets/docs/EE_logo.png)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+##Site Summary
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Are you a photographer who wants to share your talent and passion with the world? Do you dream of turning your hobby into a source of income? If so, you need to check out Emerald Eye, the ultimate platform for Irish photographers. 
 
-## Codeanywhere Reminders
+Emerald Eye is a website that allows up and coming photographers across Ireland to sell prints of their work. Whether you specialize in breathtaking landscapes, captivating portraits, or anything in between, Emerald Eye can help you reach a global audience of buyers who appreciate your art. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+Emerald Eye is more than just a marketplace. It is a community of artists who support each other and celebrate the beauty of Ireland. You can showcase your portfolio, get feedback from peers, and discover new inspirations. You can also learn from experts and improve your skills through online courses and workshops. 
 
-`python3 -m http.server`
+Emerald Eye takes care of everything for you. You don’t have to worry about ordering, printing, or shipping your prints. All you have to do is upload your photos, set your prices, and wait for the orders to come in. Emerald Eye handles the rest and pays you a fair commission for every sale. 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Emerald Eye is the perfect opportunity for you to turn your passion into profit. Join Emerald Eye today and let the world see Ireland through your eyes. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+##Commercial Viability (Business Model) 
 
-`http_server`
+People like good photos, they tell stories, they stir emotions, they connect us with things we love. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The business model for Emerald Eye is to be a frictionless environment for artists to sell their work. The hook is that this site is for Irish artists promoting images taken in Ireland. 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The upfront costs with this business are low since it will be entirely web based and hosting costs will really only increase with site traffic (and sales) 
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Printing/framing will be outsourced initially and brought inhouse if demand reaches a point where economies of scale make this practical. 
 
-To log into the Heroku toolbelt CLI:
+I have experience with photography and will initially seed the site with my own work 
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+##Agile Planning
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The following are intitial user stories
 
----
+###SITE OWNER 
 
-Happy coding!
+* As a site owner I want a landing page that instantly lets visitors know the purpose of the site and what we are selling 
+* As a site owner I want the ability to promote artists/photos on the landing page so I can highlight exceptional work 
+* As a site owner I want to see a record of sales made so I can review business success and growth 
+* As a site owner I want to limit how many items a Seller can make available at one time so I can protect against possible spamming of the system and storage costs 
+
+###ARTIST 
+
+* As a seller I want to create an account that allows me to quickly sell my work 
+* As a seller I want to upload photos so that clients can view and purchase them 
+* As a seller I want to set the prices for my photos so I make a fair return 
+* As a seller I want to upload a custom avatar and page banner so I can add personal branding to make me memorable to clients 
+* As a seller I want to provide higher res images for preview so clients can see the details in my work and increase the likelihood of a purchase 
+
+BUYERS 
+
+* As a buyer I want the ability to register an account so I can make my chosen purchase 
+* As a buyer I want to see a large preview of the photo I am purchasing so I can decide if I like it 
+* As a buy I want the option to store my details so I can make purchases quickly in the future 
