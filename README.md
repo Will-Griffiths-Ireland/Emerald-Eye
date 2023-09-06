@@ -1,8 +1,8 @@
-#Emerald Eye
+# Emerald Eye
 
 ![Logo](./assets/docs/EE_logo.png)
 
-##Site Summary
+## Site Summary
 
 Are you a photographer who wants to share your talent and passion with the world? Do you dream of turning your hobby into a source of income? If so, you need to check out Emerald Eye, the ultimate platform for Irish photographers. 
 
@@ -14,7 +14,7 @@ Emerald Eye takes care of everything for you. You don’t have to worry about or
 
 Emerald Eye is the perfect opportunity for you to turn your passion into profit. Join Emerald Eye today and let the world see Ireland through your eyes. 
 
-##Commercial Viability (Business Model) 
+## Commercial Viability (Business Model) 
 
 People like good photos, they tell stories, they stir emotions, they connect us with things we love. 
 
@@ -26,11 +26,11 @@ Printing/framing will be outsourced initially and brought inhouse if demand reac
 
 I have experience with photography and will initially seed the site with my own work 
 
-##Agile Planning
+## Agile Planning
 
 The following are intitial user stories
 
-###SITE OWNER 
+### SITE OWNER 
 
 * As a site owner I want a landing page that instantly lets visitors know the purpose of the site and what we are selling 
 * As a site owner I want the ability to promote artists/photos on the landing page so I can highlight exceptional work 
