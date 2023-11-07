@@ -30,4 +30,14 @@ All user story planning and acceptance criteria can be viewed on the [connected 
 
 ## Site Design
 
+### Wireframes
+
 ### Color Schemes
+
+### Fonts
+
+### Database Schema
+
+## Site Features
+
+### Navigation
