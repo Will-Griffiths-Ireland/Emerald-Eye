@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
+:root {
+
+    --black: #000000;
+    --white: #ffffff;
+
+    --box_shadow: .1rem .1rem .4rem var(--black);
+    --image_shadow: drop-shadow(.1rem .1rem .4rem var(--black));
+}
+
 * {
     font-family: 'Lilita One',
             sans-serif;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
 }
 
 .nav_logo {
@@ -15,6 +24,11 @@ body {
 
 .navbar-light {
     background-color: #ffffff !important;
+}
+
+.navbar{
+    border-bottom: 1px solid #000000;
+    box-shadow: 0rem 0rem 1rem #000000;
 }
 
 .navbar-brand{
@@ -32,4 +46,28 @@ body {
 .nav_cart:hover{
     transition-duration: 200ms;
     transform: scale(1.2);
+}
+
+.center_screen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    height: 100%;
+}
+
+.form {
+    width: 100%;
+    margin: 5% auto;
+    box-shadow: var(--box_shadow);
+    border-radius: .5rem;
+    padding: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .form {
+        padding: 5rem;
+    }
 }
