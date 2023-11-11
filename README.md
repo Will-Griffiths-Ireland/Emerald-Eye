@@ -1,6 +1,6 @@
 # Emerald Eye
 
-![Logo](./assets/docs/EE_logo.png)
+![Logo](assets/docs/brand_logo.png)
 
 ## Site Summary
 
@@ -29,6 +29,8 @@ The desire for printed artwork, and the associated costs, has lessened in favor 
 All user story planning and acceptance criteria can be viewed on the [connected project here.](https://github.com/users/Will-Griffiths-Ireland/projects/4/views/2)
 
 ## Site Design
+
+The overall design of the site is tailored towards minilism and focusing on the art itself
 
 ### Wireframes
 

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-
+* {
+    font-family: 'Lilita One',
+            sans-serif;
+}
 
 body {
     background-color: rgb(255, 255, 255);
@@ -8,7 +11,6 @@ body {
 
 .nav_logo {
     height: 5rem;
-    width: 5rem;
 }
 
 .navbar-light {
@@ -20,4 +22,8 @@ body {
     sans-serif;
     font-size: 3rem;
 
+}
+
+.nav_cart{
+    height: 4rem;
 }
