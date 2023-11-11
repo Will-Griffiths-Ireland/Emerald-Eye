@@ -1,29 +1,9 @@
-{% extends "includes/header.html" %}
+{% extends "includes/core.html" %}
 {% load static %}
-<body>
-    <h2> Landing page and welcome</h2>  
-</body>
-</html>
-
-<title>Journee - {% block page_title %}{% endblock %}</title>
-</head>
-<body>
-{% include 'includes/header.html' %}
-    <main>
-        <!-- Display user action messages     -->
-        {% if messages %}
-            {% for message in messages|slice:":1" %}
-            <div class="alert alert-success fade show" role="alert">
-                {{ message }}
-            </div>
-            {% endfor %}
-            {% endif %}
-
-        {% block content %}
-        {% endblock %}
-    </main>
-
-    {% include 'includes/footer.html' %}
-</body>
-
-</html>
+{% block page_title %}Welcome To Irish Digital Art{% endblock %}
+{% block content %}
+<div>
+     <h2>Welcome Page !!</h3>
+</div>
+   
+{% endblock %}

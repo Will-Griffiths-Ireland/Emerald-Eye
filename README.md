@@ -30,16 +30,42 @@ All user story planning and acceptance criteria can be viewed on the [connected 
 
 ## Site Design
 
-The overall design of the site is tailored towards minilism and focusing on the art itself
+The overall design of the site is tailored towards minilism and focusing on the art itself. Initially I was going to allow users to just upload as many images as they wanted directly, but this raised concerns over inaproriate content and a flood of low quality content. The approach I decided on was a more curated and personal touch, much like a small art gallery.
+
+
 
 ### Wireframes
 
+The site follows a classic approach and the wireframes were the intitial concept
+
 ### Color Schemes
 
+Green - #385723
+White = #ffffff
+Gold - #ffc000
+
 ### Fonts
+
+I landed on using the 'Lilita One' font, it really just came from testing out multiple fonts till I found one that had the right vibe
 
 ### Database Schema
 
 ## Site Features
 
 ### Navigation
+
+### Main Landing Page
+
+### Account Management
+
+### Art Details
+
+### Art Edit & Deletion
+
+### Purchase List (Cart)
+
+### Payment
+
+### Order Confirmation & Digital Delivery
+
+

@@ -25,5 +25,11 @@ body {
 }
 
 .nav_cart{
-    height: 4rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+    transition-duration: 200ms;
+}
+.nav_cart:hover{
+    transition-duration: 200ms;
+    transform: scale(1.2);
 }
