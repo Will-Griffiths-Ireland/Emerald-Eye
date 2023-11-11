@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+
 body {
-    background-color: rgb(219, 164, 47);
+    background-color: rgb(255, 255, 255);
+}
+
+.nav_logo {
+    height: 5rem;
+    width: 5rem;
+}
+
+.navbar-light {
+    background-color: #ffffff !important;
+}
+
+.navbar-brand{
+    font-family: 'Lilita One',
+    sans-serif;
+    font-size: 3rem;
+
 }
