@@ -1,0 +1,21 @@
+{% extends "includes/core.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block page_title %}Add Artwork{% endblock %}
+{% block content %}
+<div class="center_screen">
+    <div class="container m-4 p-4 fade-in">
+        <form method="POST" enctype="multipart/form-data" class="p-4 form mt-2">
+            <h1 class="text-center">Add Artwork </h1>
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form|crispy }}
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-2">Add Art</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+   
+{% endblock %}

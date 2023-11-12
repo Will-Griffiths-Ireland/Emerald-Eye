@@ -8,8 +8,8 @@
 </h1>
 <div class="container d-flex flex-row flex-wrap justify-content-center fade-in-group">
 
-    {% for art in artworks %}
-    <a href="{% url 'view_journal_page' art.id %}" class="art_detail"
+    {% for art in artwork %}
+    <a href="{{art.id}}" class="art_detail"
         aria-label="Click to view {{ art.title }}">
         <div class="card m-2 " style="width: 18rem;">
             <div class="card-body">
