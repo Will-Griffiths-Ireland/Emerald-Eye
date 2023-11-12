@@ -11,13 +11,13 @@ class ArtForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # self.fields['is_public'].initial = self.get_pub_pref()
-
 
     class Meta:
         model = Artwork
         fields = ['title',
+                  'artist_name',
                   'price',
+                  'description',
                   'available',
                   'preview_image',
                   'full_quality_image']
@@ -25,6 +25,8 @@ class ArtForm(forms.ModelForm):
         labels = {
             'title': 'Title',
             'price': 'Price',
+            'artist_name': 'Name of Artist',
+            'description': 'Description of Artwork',
             'available': 'Available for purchase',
             'preview_image': 'Preview Image',
             'full_quality_image': 'Image sent on purchase'

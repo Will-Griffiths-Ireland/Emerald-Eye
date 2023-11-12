@@ -1,0 +1,24 @@
+{% extends 'includes/core.html' %}
+{% block page_title %} Artwork Deletion {% endblock %}
+
+{% block content %}
+
+<div class="center_screen">
+  <div class="text-center border_shadow m-4 p-4 fade-in">
+    <h1 class="text-center mt-2">Confirm Deletion of Artwork</h1>
+    <div class="d-flex justify-content-center pt-3">
+        <form method="POST" class="text-center">
+            {% csrf_token %}
+            <p>
+                Please confirm you want to proceed with deleting this artwork?</p>
+                <p> Title: {{ artwork.title }}</p>
+                <p> By Artist: {{ artwork.artist_name }}</p>
+            </p>
+            <input type="submit" value="Confirm" class="btn btn-danger">
+            <a href="javascript:history.go(-1)"  class="btn btn-primary">Cancel</a>
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'includes/core.html'%}
+{% load static %}
+{% block page_title %} Edit Artwork {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <form method="POST" enctype="multipart/form-data" class="form">
+        <h1 class="text-center">Edit Artwork</h1>
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form|crispy }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-2">Save Changes</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
