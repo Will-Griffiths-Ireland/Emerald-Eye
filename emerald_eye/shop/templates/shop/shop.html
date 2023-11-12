@@ -1,9 +1,40 @@
 {% extends "includes/core.html" %}
 {% load static %}
-{% block page_title %}Art For Purchase{% endblock %}
+{% block page_title %}Product Catalog{% endblock %}
 {% block content %}
-<div class="container">
-     <h2>Here are all the lovely pieces you can purchase</h3>
+<div class="center_screen">
+<h1 class="text-center p-2">
+     Product Catalog (Total Artworks - {{ page_obj.paginator.count }})
+</h1>
+<div class="container d-flex flex-row flex-wrap justify-content-center fade-in-group">
+
+    {% for art in artworks %}
+    <a href="{% url 'view_journal_page' art.id %}" class="art_detail"
+        aria-label="Click to view {{ art.title }}">
+        <div class="card m-2 " style="width: 18rem;">
+            <div class="card-body">
+                <h2 class="card-title text-center"> {{ art.title }}</h2>
+                <img src="{{ art.preview_image.url }}" class="card-img-top card-day-image" alt="Journal cover image">
+                <p class="card-text text-center">{{ art.artist_name }}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %} 
+    <div class="container text-center m-2">
+    {% if page_obj.has_other_pages %}
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline">Previous Page</a>
+    {% else %}
+    <a href="#" class="btn btn-primary disabled">Previous Page</a>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline">Next Page</a>
+    {% else %}
+    <a href="#" class="btn btn-primary disabled">Next Page</a>
+    {% endif %}
+    {% endif %}
+</div>
+</div>
 </div>
    
 {% endblock %}
