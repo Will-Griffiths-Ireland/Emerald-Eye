@@ -114,3 +114,19 @@ class DeleteArt(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         self.get_object().delete()
         messages.success(request, 'Artwork Deleted !!!')
         return redirect('/shop/')
+    
+class OrderList(LoginRequiredMixin, ListView):
+    """
+    View all available art
+    """
+
+    template_name = "shop/cart.html"
+    model = Order
+    context_object_name = "order"
+
+    # Return only available art
+    def get_queryset(self, **kwargs):
+        cart = self.model.objects.filter(
+                Q(self.request.user == Order.customer, Order.complete==False)
+            ).order_by('-id')
+        return cart

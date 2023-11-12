@@ -2,8 +2,26 @@
 {% load static %}
 {% block page_title %}Your Current Order List{% endblock %}
 {% block content %}
-<div class="container">
-     <h2>Here is a list of all the the current items you have selected</h3>
+<div class="center_screen">
+<h1 class="text-center p-2">
+     Items in this Cart
+</h1>
+<div class="container d-flex flex-row flex-wrap justify-content-center fade-in-group">
+     <table class="table">
+  <tr>
+    <th>Thumbnail</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  {% for item in order %}
+  <tr>
+    <td>{{ item.preview_image.url }}</td>
+    <td>{{ item.title  }}</td>
+    <td>{{ item.price }}</td>
+  </tr>
+  {% endfor%}
+
+</table>
+
 </div>
-   
 {% endblock %}
