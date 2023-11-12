@@ -3,15 +3,15 @@
 
 {% load i18n %}
 
-{% block page_title %}{% trans "Login" %}{% endblock %}
+{% block page_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
 <div class="center_screen">
-<div class="text-center border_shadow m-4 p-4 fade-in">
-  <h1 class="p-4">Login</h1>
+<div class="text-center  m-4 p-4 fade-in">
+  <h1 class="p-4">Sign In</h1>
 
   <p class="p-2">{% blocktrans %}If you have not created an account yet, then please
-    <a href="{{ signup_url }}">create one here</a> first.{% endblocktrans %}
+    <a href="{{ signup_url }}">register here</a> first.{% endblocktrans %}
   </p>
 
   <form class="form p-4" method="POST" action="{% url 'account_login' %}">
