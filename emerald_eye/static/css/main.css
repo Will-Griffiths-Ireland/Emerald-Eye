@@ -157,6 +157,15 @@ footer a {
     color: inherit;
 }
 
+/* ###### CART STYLING ###### */
+
+.cart-image{
+        max-width: 10vw;
+        object-fit: scale-down;
+        filter: var(--image_shadow);
+        align-self: center;
+}
+
 /* ###### ART PREVIEW CARDS ###### */
 
 .card {
