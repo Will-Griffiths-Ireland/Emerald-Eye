@@ -115,18 +115,30 @@ class DeleteArt(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         messages.success(request, 'Artwork Deleted !!!')
         return redirect('/shop/')
     
-class OrderList(LoginRequiredMixin, ListView):
+class OrderList(UserPassesTestMixin, ListView):
     """
-    View all available art
+    View all art in order
     """
 
-    template_name = "shop/cart.html"
-    model = Order
-    context_object_name = "order"
+    def test_func(self):
+        return self.request.user.is_authenticated
+    
+    def get(self, request, *args, **kwargs):
+        order = Order.objects.get_or_create(customer=request.user, complete=False)[0]
+        context = {'order': order, 'items': order.orderitem_set.all()}
+        return render(request, 'shop/cart.html', context)
+    
+class AddToCartView(UserPassesTestMixin, ListView):
 
-    # Return only available art
-    def get_queryset(self, **kwargs):
-        cart = self.model.objects.filter(
-                Q(self.request.user == Order.customer, Order.complete==False)
-            ).order_by('-id')
-        return cart
+    def test_func(self):
+        return self.request.user.is_authenticated
+
+    def post(self, request, *args, **kwargs):
+        order_id = Order.objects.get_or_create(customer=request.user, complete=False)[0]
+        item_id = request.POST.get('product_id')
+        artwork = Artwork.objects.get(id=item_id)
+        orderitem, created = OrderItem.objects.get_or_create(
+            order=order_id,
+            item=artwork
+        )
+        return redirect('/cart/')

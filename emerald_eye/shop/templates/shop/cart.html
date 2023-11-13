@@ -1,10 +1,10 @@
 {% extends "includes/core.html" %}
 {% load static %}
-{% block page_title %}Your Current Order List{% endblock %}
+{% block page_title %}Your Current Order {% endblock %}
 {% block content %}
 <div class="center_screen">
 <h1 class="text-center p-2">
-     Items in this Cart
+     Items in this Cart - Order No. (# {{ order.id }})
 </h1>
 <div class="container d-flex flex-row flex-wrap justify-content-center fade-in-group">
      <table class="table">
@@ -13,14 +13,13 @@
     <th>Title</th>
     <th>Price</th>
   </tr>
-  {% for item in order %}
+  {% for item in items %}
   <tr>
-    <td>{{ item.preview_image.url }}</td>
-    <td>{{ item.title  }}</td>
-    <td>{{ item.price }}</td>
+    <td><img src="{{ item.item.preview_image.url }}" class="card-art-image" alt="Artwork preview"></td>
+    <td>{{ item.item.title }}</td>
+    <td>{{ item.item.price }}</td>
   </tr>
-  {% endfor%}
-
+{% endfor %}
 </table>
 
 </div>
