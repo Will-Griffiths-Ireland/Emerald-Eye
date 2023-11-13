@@ -12,12 +12,14 @@
     <th>Thumbnail</th>
     <th>Title</th>
     <th>Price</th>
+    <th>Manage</th>
   </tr>
   {% for item in items %}
   <tr>
     <td><img src="{{ item.item.preview_image.url }}" class="card-art-image" alt="Artwork preview"></td>
     <td>{{ item.item.title }}</td>
     <td>{{ item.item.price }}</td>
+    <td> <a href="{% url 'delete_cart_item' item.id %}" class="btn btn-danger"> Remove Item </a></td> 
   </tr>
 {% endfor %}
 </table>

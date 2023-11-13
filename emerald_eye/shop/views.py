@@ -142,3 +142,21 @@ class AddToCartView(UserPassesTestMixin, ListView):
             item=artwork
         )
         return redirect('/cart/')
+    
+class DeleteCartItem(UserPassesTestMixin, DeleteView):
+    """Remove item from cart"""
+
+    model = OrderItem
+    success_url = "cart/"
+
+    def test_func(self):
+        return self.request.user.is_authenticated
+
+    # For an unkown reason the SuccessMessageMixn is not working on Deleteview
+    # even though it should be fixed per an issue
+    # https://code.djangoproject.com/ticket/21936
+
+    def post(self, request, *args, **kwargs):
+        self.get_object().delete()
+        messages.success(request, 'Item removed from your cart')
+        return redirect('cart')
