@@ -1,5 +1,8 @@
+import stripe
 from django.shortcuts import render
-
+from django.core.mail import send_mail
+import socket
+from django.conf import settings
 from django.db.models.query import QuerySet
 from django.contrib import messages
 from django.shortcuts import redirect
@@ -17,6 +20,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.db.models import Q
+from django.contrib.sites.shortcuts import get_current_site
+
+
 
 # Create your views here.
 
@@ -125,7 +131,9 @@ class OrderList(UserPassesTestMixin, ListView):
     
     def get(self, request, *args, **kwargs):
         order = Order.objects.get_or_create(customer=request.user, complete=False)[0]
-        context = {'order': order, 'items': order.orderitem_set.all()}
+        items = order.orderitem_set.all()
+        total_price = sum(item.item.price for item in items)
+        context = {'order': order, 'items': order.orderitem_set.all(), 'total_price': total_price}
         return render(request, 'shop/cart.html', context)
     
 class AddToCartView(UserPassesTestMixin, ListView):
@@ -160,3 +168,49 @@ class DeleteCartItem(UserPassesTestMixin, DeleteView):
         self.get_object().delete()
         messages.success(request, 'Item removed from your cart')
         return redirect('cart')
+    
+#class ProcessOrder(ListView):
+
+#     send_mail(
+#     "Order Complete",
+#     "Here is the message.",
+#     "No_Reply@Emerald_Eye.com",
+#     ["williamgriffithsireland@hotmail.com"],
+#     fail_silently=False,
+# )
+    
+def create_checkout_session(request):
+
+    stripe.api_key = settings.STRIPE_API_KEY
+    current_site = get_current_site(request)
+    domain_name = current_site.domain
+
+    order = Order.objects.get_or_create(customer=request.user, complete=False)[0]
+    items = order.orderitem_set.all()
+    total_price = sum(item.item.price for item in items) * 100
+
+    try:
+        checkout_session = stripe.checkout.Session.create(
+            line_items=[{
+            'price_data': {
+                'currency': 'eur',
+                'unit_amount': int(total_price),
+                'product_data': {
+                    'name': 'Emerald Eye Image Purchase',
+                },
+            },
+            'quantity': 1,
+        }],
+        mode='payment',
+        payment_method_types = ['card'],
+        # PROD CODE
+        # success_url = domain_name + '/shop',
+        # cancel_url = domain_name + '/cart',
+        # TEST CODE
+        success_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/shop',
+        cancel_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev//cart',
+        )
+    except Exception as e:
+        return redirect('cart')
+
+    return redirect(checkout_session.url, code=303)
