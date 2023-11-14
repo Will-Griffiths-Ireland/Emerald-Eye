@@ -53,7 +53,13 @@ body {
 /* ###### NAVBAR STYLING ###### */
 
 .nav_logo {
-    height: 5rem;
+    height: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .nav_logo {
+        height: 5rem;
+    }
 }
 
 .navbar-light {
@@ -68,8 +74,14 @@ body {
 .navbar-brand {
     font-family: 'Lilita One',
         sans-serif;
-    font-size: 3rem;
+    font-size: 1.5rem;
 
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-brand {
+                font-size: 3rem;
+    }
 }
 
 .nav_cart {
