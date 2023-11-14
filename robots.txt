@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Sitemap: https://emerald-eye-d7829689bf6e.herokuapp.com/sitemap.xml

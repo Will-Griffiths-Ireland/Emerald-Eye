@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/shop/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/accounts/signup/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/accounts/login/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/15/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/16/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/21/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/22/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/23/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/14/</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/shop/?page=2</loc>
+	<lastmod>2023-11-14T20:11:55+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/accounts/password/reset/</loc>
+	<lastmod>2023-11-14T20:11:59+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/accounts/login/?next=/cart/</loc>
+	<lastmod>2023-11-14T20:11:59+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/accounts/signup/?next=/cart/</loc>
+	<lastmod>2023-11-14T20:11:59+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/24/</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/25/</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/26/</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/27/</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/28/</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/20/</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/shop/?page=1</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/shop/?page=3</loc>
+	<lastmod>2023-11-14T20:12:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/19/</loc>
+	<lastmod>2023-11-14T20:12:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/17/</loc>
+	<lastmod>2023-11-14T20:12:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://emerald-eye-d7829689bf6e.herokuapp.com/art_detail/18/</loc>
+	<lastmod>2023-11-14T20:12:03+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+</urlset>

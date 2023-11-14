@@ -37,6 +37,7 @@ All user story planning and acceptance criteria can be viewed on the [connected 
 
 The overall design of the site is tailored towards minilism and focusing on the art itself. Initially I was going to allow users to just upload as many images as they wanted directly, but this raised concerns over inaproriate content and a flood of low quality content. The approach I decided on was a more curated and personal touch, much like a small art gallery.
 
+Due to time constraints this is very much an MVP storefront that was built rapidly but still aims to be fully functional and meet all pass criteria.
 
 
 ### Wireframes
@@ -55,7 +56,7 @@ Gold - #ffc000
 
 ### Fonts
 
-I landed on using the 'Lilita One' font, it really just came from testing out multiple fonts till I found one that had the right vibe
+I landed on using the 'Lilita One' font, it really just came from testing out multiple fonts till I found one that had the right vibe for teh site
 
 ### Database Schema
 
@@ -71,13 +72,23 @@ A simple page welcomes users to the site but will be a platform to build upon in
 
 ### Account Management
 
+User can browse works but will be dierected to create an account
+
+### Message notifications
+
+All imporant actions across the site such as user authentication or adding art to the cart will result in onscreen notifications.
 ### Art Details
 
 ### Art Edit & Deletion
 
+### Staff Access
+
+
 ### Purchase List (Cart)
 
 ### Payment
+
+Payment is handle via stripe and the price is calcualted based on
 
 ### Order Confirmation & Digital Delivery
 
@@ -96,4 +107,10 @@ Configure automatic deploys: In the “Automatic deploys” section, select the 
 Deploy your app: In the “Manual deploy” section, select the branch you want to deploy and click the “Deploy Branch” button. Heroku will build and deploy your app.
 
 View your app: Once your app is deployed, you can view it by clicking the “View” button in the top right corner of the dashboard.
+
+## Technologoes Used
+
+## Credits and Thanks
+
+
 
