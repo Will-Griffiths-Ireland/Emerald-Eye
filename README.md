@@ -14,6 +14,8 @@ Emerald Eye takes care of everything for you. Our inovative digital first approa
 
 Emerald Eye is the perfect opportunity for you to turn your passion into profit. Join Emerald Eye today and let the world see Ireland through your eyes. 
 
+[Visit the deployed site here](https://emerald-eye-d7829689bf6e.herokuapp.com/)
+
 ** **NOTE** **
 
 This site is purely a demo and no charges are incurred.
@@ -98,7 +100,7 @@ The site might be simple but packs in all the critical features to enable a succ
 * Platform for future deals and showcases
 * Splash image is to make the sites purpose clear
 
-![splash](assets/docs/home.png)
+![home](assets/docs/home.png)
 
 ### Account Management
 
