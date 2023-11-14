@@ -63,7 +63,11 @@ I landed on using the 'Lilita One' font, it really just came from testing out mu
 
 ### Navigation
 
+Navigation is driven my the main menu and onscreen buttons
+
 ### Main Landing Page
+
+A simple page welcomes users to the site but will be a platform to build upon in the future when there are pieces that need to have a special showcase or for sales
 
 ### Account Management
 

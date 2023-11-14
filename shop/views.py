@@ -222,12 +222,8 @@ def create_checkout_session(request):
         mode='payment',
         customer_email=request.user.email,
         payment_method_types = ['card'],
-        # PROD CODE
-        # success_url = domain_name + '/order_complete?session_id={CHECKOUT_SESSION_ID}',
-        # cancel_url = domain_name + '/cart',
-        # TEST CODE
-        success_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/order_complete?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/cart',
+        success_url = domain_name + '/order_complete?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url = domain_name + '/cart',
         metadata={"order_id": order.id },
         )
     except Exception as e:
