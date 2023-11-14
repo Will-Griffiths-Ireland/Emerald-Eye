@@ -26,7 +26,8 @@ if os.path.exists("env.py"):
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "DEV" in os.environ
+# DEBUG = "DEV" in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','localhost',
                  'https://emerald-eye-d7829689bf6e.herokuapp.com/']
@@ -91,16 +92,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'emerald_eye.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': {
