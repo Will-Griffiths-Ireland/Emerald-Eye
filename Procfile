@@ -1,0 +1,1 @@
+web: gunicorn emerald_eye.wsgi:application

@@ -42,6 +42,25 @@ class ArtList(ListView):
                 Q(available='True')
             ).order_by('-date_added')
         return artwork
+    
+class ArtSearch(ListView):
+    """
+    View all available art based on user search
+    """
+
+    template_name = "shop/shop.html"
+    model = Artwork
+    context_object_name = "artwork"
+    paginate_by = 6
+
+    # Return only available art with match to description
+    def get_queryset(self, **kwargs):
+        query = self.request.GET.get('q')
+        artwork = self.model.objects.filter(
+                Q(title__icontains=query) | Q(description__icontains=query),
+                available='True'
+            ).order_by('-date_added')
+        return artwork 
 
 def index(request):
     context = {}
@@ -55,14 +74,6 @@ class ArtDetail(DetailView):
     template_name = "shop/art_detail.html"
     model = Artwork
     context_object_name = "art"
-
-def cart(request):
-    context = {}
-    return render(request, 'shop/cart.html')
-
-def checkout(request):
-    context = {}
-    return render(request, 'shop/checkout.html')
 
 
 class AddArt(SuccessMessageMixin, LoginRequiredMixin, CreateView):

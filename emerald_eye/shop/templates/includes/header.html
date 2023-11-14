@@ -49,10 +49,11 @@
         </li>
         {% endif %}
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <form class="d-flex" role="search" method="GET" action="{% url 'shop_search' %}">
+                    <input class="form-control me-2" name="q" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
       <a href="{% url 'cart' %}"target="_self" rel="noopener" aria-label="Link - Opens list of art selected for purchase"><img class="nav_cart" src="{% static 'images/image_cart.webp'%}" ></a>
     </div>
   </div>
