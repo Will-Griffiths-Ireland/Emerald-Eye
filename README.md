@@ -44,7 +44,7 @@ Due to time constraints this is very much an MVP storefront that was built rapid
 
 The site follows a classic approach and the wireframes were the intitial concept that I knew would align with a trnaditional store format and would be qucik to implement with bootstrap.
 
-The pdf can be found here
+The pdf can be found [here](assets/docs/Wireframes.pdf)
 
 ### Color Schemes
 
@@ -54,63 +54,180 @@ Green - #385723
 White = #ffffff
 Gold - #ffc000
 
+![colours](assets/docs/logo.webp)
+
 ### Fonts
 
-I landed on using the 'Lilita One' font, it really just came from testing out multiple fonts till I found one that had the right vibe for teh site
+* I landed on using the 'Lilita One' font, it really just came from testing out multiple fonts till I found one that had the right vibe for the site
+* sans serif is the fallback
 
 ### Database Schema
 
+I used a highly optimized and performant schema that spans 4 tables.
+
+![db](assets/docs/db.png)
+
 ## Site Features
 
-### Navigation
+The site might be simple but packs in all the critical features to enable a successfull go-live.
 
-Navigation is driven my the main menu and onscreen buttons
+* Simple navigation
+* User Authentication
+* Dymanic add/edit/delete of art by staff from site interface
+* Product listing
+* Product Search
+* Product Detail
+* Automatatic order creation and cart persistence
+* Full stripe intergration with dynamic pricing
+* Email confirmations with assest delivery
+* Staff sales data report
+
+### Logo & Navigation
+
+* Top left is the sites logo.
+* Menu items are displayed depending on authetication state
+* Staff pages restricted to staff only
+* Search input
+* Images cart
+
+![navbar](assets/docs/navbar.png)
 
 ### Main Landing Page
 
-A simple page welcomes users to the site but will be a platform to build upon in the future when there are pieces that need to have a special showcase or for sales
+* A simple page welcomes users to the site
+* Platform for future deals and showcases
+* Splash image is to make the sites purpose clear
+
+![splash](assets/docs/splash.png)
 
 ### Account Management
 
-User can browse works but will be dierected to create an account
+** NOTE ** This site is not security hardened since its in a test/demo state. Email verification is not enabled to allow for easy testing/review. A production site would have this enabled.
 
-### Message notifications
+* Menu will display register and sign in options if use is not authenticated
+* If authenticated menu will display sign out (USER)
+* All the different views on the site are driven through authenication status and only relevant options are displayed
 
-All imporant actions across the site such as user authentication or adding art to the cart will result in onscreen notifications.
+### Message Notifications
+
+* All imporant actions across the site such as user authentication or adding art to the cart will result in onscreen notifications.
+* These fade away after a few seconds
+
+![notifications](assets/docs/sign-in.png)
+
+### Shop
+
+* The main shop page displays art cards of the products
+* 6 items per page
+* Full pagination with total
+* Clicking takes you to the details of that item
+* User that are not authenticated can browse all items (to entice them to register and purchase) but the purchase button is one to register
+
+![shop](assets/docs/shop.png)
+
+### Search
+
+* In the navigation bar users can enter search critera.
+* Artwork with matching text in the title or description is then displayed
+
 ### Art Details
+
+* Displays larger preview image
+* Diplays details of item
+* Buttons for Purchase / Edit / Delete displayed based on the authentication level of the user
+* Purchase Button adds item to the users cart and takes them to it
+
+![detail](assets/docs/detail.png)
+
 
 ### Art Edit & Deletion
 
-### Staff Access
+* Staff have edit and delete buttons
+* Edit allows alteration of item
+* Setting available to false will hide the item
+* Deletion has strong confirmation warning
 
 
 ### Purchase List (Cart)
 
 ### Payment
 
-Payment is handle via stripe and the price is calcualted based on
+Payment is handle via stripe and the price is calcualted based on all the
 
 ### Order Confirmation & Digital Delivery
 
+
+
+
+## Testing
+
+All details on testing can be found [here](TESTING.md)
+
+## Technologies & Tools
+
+* Github & Codespaces (Ubuntu 22.04.2 LTS)
+* Python 3.8.12
+* Bootstrap 5.3
+* Jquery 3.7.0
+* Django 3.2.19
+* HMTL 5
+* CSS 3
+* Javascript
+* DrawSQL
+* Paint.net
+* MS Powerpoint
+* Heroku
+* stripe.com
+* cloudinary.com
+* elephantsql.com
+* gmail.com
+
+## Packages
+
+You can check all the packages/libs and their versions in the [requirements.txt](requirements.txt)
+
 ## Deployment
 
-### Deploying to Heroku
+Below is a general guide for deploying this application yourself.
 
-Create a Heroku account: If you don’t already have a Heroku account, go to heroku.com and sign up for a free account.
+There are many options for PaaS, database hosting services, and file hosting services. If you use different providers to me then you will need to configure [emerald_eye/settings.py](emerald_eye/settings.py) further to what I mention below and need to refer to the relevant [Django documentation](https://docs.djangoproject.com/en/3.2/) for the correct settings.
 
-Create a new app: Once you’re logged in to your Heroku account, click the “New” button in the top right corner of the dashboard and select “Create new app”. Give your app a name and select a region.
+Ideally connect your forked repo with a cloud based IDE like Codespaces/Gitpod/Codeanywhere and use a linux based container/workspace.
+This repo is built on template the code institue developed (.devcontainer) that works well with Codeanywhere and triggers a build of the base enviroment (Ubuntu 22.04.2 + python 3.8)
 
-Connect your GitHub repository: In the “Deploy” tab of your app dashboard, scroll down to the “Deployment method” section and select “GitHub”. Connect your GitHub account and select the repository you want to deploy.
 
-Configure automatic deploys: In the “Automatic deploys” section, select the branch you want to deploy automatically. Whenever you push changes to this branch, Heroku will automatically build and deploy your app.
+* Fork the github repo (recommended) or clone the repo locally
+* Setup your cloud enviroment 
+* Install all the required packages ( just run the command __pip install -r requirements.txt__ )
+* Setup an account and a new database on https://www.elephantsql.com/
+* Update the DATABASE dictionary in settings.py to point to your HOST/NAME/USER
+* Setup an account on http://www.Cloudinary.com
+* Create an env.py in your projects root and add it the .gitignore file,then add the below code with these settings
+* Update the secret key with a random string of your choosing, and update the elephantsql DB_PASSWORD with your own, finally put your own cloudinary connection url in
+>import os
+>os.environ['SECRET_KEY'] = '--UNIQUE SECRET KEY--'  
+>os.environ['DEV'] = 'True'  
+>os.environ['CLOUDINARY_URL'] = '--URL TO ACCESS CLOUDINARY--'  
+>os.environ['DB_PASSWORD'] = '--PASSWORD FOR DB CONNECTION--'
 
-Deploy your app: In the “Manual deploy” section, select the branch you want to deploy and click the “Deploy Branch” button. Heroku will build and deploy your app.
+* Run a django migration (python manage.py migrate) to create the tables on your database
+* Create an account on Heroku and create a new app
+* Update the apps settings with config vars that match those in the env file SECRET_KEY, CLOUDINARY_URL, DB_PASSWORD
+* Deploy App 
 
-View your app: Once your app is deployed, you can view it by clicking the “View” button in the top right corner of the dashboard.
 
-## Technologoes Used
+
+## Future Enhancements
+
+* Full encrption of all user journal and profile information
+* Ability to search users based on their description words
+* Ability to follow other users and have a dedicated page view of their pages, while keeping the experince passive and unintrusive
+* Profile can set preference for color and font
+
+
 
 ## Credits and Thanks
 
-
+All test images used were my own
+Bing was used to create the splash image on the index page 
 

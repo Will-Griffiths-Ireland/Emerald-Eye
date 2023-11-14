@@ -1,49 +1,69 @@
 # Testing
 
-User story based end to end testing was performed on both desktop and mobile devices.
+* User story based end to end testing was performed on both desktop and mobile devices.
+* Tests are based on user stories and their acceptance criteria
+* Expanded tests were included to cover the entire user experince
+* Full scenario and test steps descriptions were omitted for brevity and readability
+* Future projects will include testing items in the project board itself
 
-## Site Navigation
+### Manual Tests
 
-Scenario: The user navigates to the website and is able to find the information they are looking for within 30 seconds.
-Steps:
-1. Navigate to the website.
-2. Look for the information you need.
-3. Verify that the information is easy to find and that the website has a clean and uncluttered design.
-4. Record the time it takes to find the information.
-5. If the information is found within 30 seconds, the test case passes. Otherwise, the test case fails.
+|Test| Result | Note
+|--|--|--|
+| Does the main page display correctly? | Pass | N\A |
+| Is the page responsive to different devices? | Pass | N\A |
+| CSS animations display correctly across devices? | Pass | N\A |
+| Does the navbar only show links available to anon users? | Pass | N\A |
+| Does the shop page display just 6 items per pages | Pass | N\A |
+| Does the search page display itemas that match the text searched? | Pass | N\A |
+| Does clicking an art card take you to that items details? | Pass | N\A |
+| Does clicking Account > Register, open create account page? | Pass | N\A |
+| Does the create account page validate that the username field is not blank? | Pass | N\A |
+| Does the create account page validate that the username entered is not in use? | Pass | N\A |
+| Does the password validator ensure a strong password? | Pass | N\A |
+| Does the account get created when the user clicks create account | Pass | N\A |
+| Does the user get automatically signed in? | Pass | N\A |
+| Does the user get a notification at the top of the screen to confirm sign in? | Pass | N\A |
+| Does the navbar show extra options for authenticated user | Pass | N\A |
+| Does the navbar show extra options (staff pages) for authenticated user who are staff | Pass | N\A |
+| Does the view sales page display all art items and their otal sales? | Pass | N\A |
+| Does clicking the Account > Sign Out (USER) link show the confirmation? | Pass | N\A |
+| Does confirming logout then logout the user and take them to the home page?| Pass | N\A |
+| Does the user get a message at the top of the screen to confirm they signed out? | Pass | N\A |
+| Does clicking staff pages > Add art open the add art page?  | Pass | N\A |
+| Do all fields validate input? | Pass | N\A |
+| Do required fields provide feedback if empty? | Pass | N\A |
+| Does trying to upload an non image file get blocked| Pass | N\A |
+| Does the user get a message at the top of the screen to confirm they created the art item?  | Pass | N\A |
+| Does the staff admin link take the user to the admin panel? | Pass | N\A |
+| Does clicking on at art item in the shop take you to the details screen | Pass | N\A |
+| Do all the correct details for the art piece display correctly? | Pass | N\A |
+| Do the images display correctly? | Pass | N\A |
+| Do all fields correctly render with formatting? | Pass | N\A |
+| Do edit/delete buttons display if user is staff? | Pass | N\A |
+| Does the register button display if the user is not authenticated? | Pass | N\A |
+| Does the purchase button display if the user is authenticated? | Pass | N\A |
+| Does the edit button open the edit art view? | Pass | N\A |
+| Does clicking the delete button show the delete page confirmation? | Pass | N\A |
+| Does the confirmation have the correct details? | Pass | N\A |
+| Does clicking cancel take them back to the detail page they were viewing? | Pass | N\A |
+| Does clicking confirm delete the record and take user back to the shop | Pass | N\A |
+| Does clicking purchase add that item to the users cart | Pass | N\A |
+| Does a new order get created if there isn't an existing one | Pass | N\A |
+| Does the user get shown the cart and all current items and total price | Pass | N\A |
+| Does the order persist till the next time the user logs in? | Pass | N\A |
+| Does the remove item button display? | Pass | N\A |
+| Does clicking the remove item present a confirmation? | Pass | N\A |
+| If the user cancels or confirms are they taken back to the cart? | Pass | N\A |
+| Does the complete order button display? | Pass | N\A |
+| Does the complete order button trigger and stripe checkout display? | Pass | N\A |
+| Does the checkout have the correct total and connected users email populated? | Pass | N\A |
+| Does stripe allow (test) payment to proceed? | Pass | N\A |
+| Does the user get redirected back to the success page that confirms their order completed? | Pass | N\A |
+| Does the order get marked complete? | Pass | N\A |
+| Do items in the order have their sales total incremented? | Pass | N\A |
+| Does the user get their order confirmation email along with links to download the full res images? | Pass | N\A |
 
-Result: Pass
+### Bugs & Known Issues
 
-Scenario: The user checks that all sub elements of the interface display correctly
-
-1. Brand Logo: Verify that the brand logo is displayed in the top left corner of the navbar.
-2. Index Page: Verify that the index page is accessible and displays the appropriate content.
-3. Cart Page: Verify that the cart page is accessible and displays the appropriate content.
-4. Store Link: Verify that the “Store” link in the navbar is accessible and lists artwork.
-5. Registration Link: If the user is not signed in, verify that the “Registration” link in the navbar is accessible.
-6. Sign In Link: If the user is not signed in, verify that the “Sign In” link in the navbar is accessible.
-7. Admin Link: If the user is signed in as a site admin, verify that the “Admin” link in the navbar is accessible.
-8. 404 Error Page: Verify that the 404 error page is accessible and displays the appropriate content.
-
-Result: Pass
-
-## Adding Art to Cart
-
-Scenario: The user clicks the 'Add to Cart' button and the artwork is added to their cart.
-Steps:
-1. Navigate to the artwork page.
-2. Click the 'Add to Cart' button.
-3. Verify that the artwork has been added to the cart.
-
-Result: Pass
-
-## Searching For Art
-
-Scenario: The user enters the keyword 'abstract' into the search bar and clicks the search button.
-Steps:
-1. Navigate to the search bar.
-2. Enter the keyword 'abstract' into the search bar.
-3. Click the search button.
-4. Verify that the search results include artwork related to the keyword 'abstract'.
-
-Result: Pass
+There are no bugs or known issues at this time

@@ -11,7 +11,7 @@
             <div class="m-3">
                 <h1>{{ art.title }}</h1>
                 <h2>By {{ art.artist_name }}</h2>
-                <h2>€{{art.price}}</h2>
+                <h2>€{{art.price|floatformat:2}}</h2>
                 <p>
             {{ art.description }}
                 </p>

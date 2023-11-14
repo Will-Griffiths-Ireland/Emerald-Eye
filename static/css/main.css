@@ -44,6 +44,13 @@ body {
     border-radius: 2rem;
 }
 
+.splash-image{
+    max-height: 50vh;
+    filter: var(--image_shadow);
+    display: block;
+
+}
+
 /* Fix display issue with richtextfield not displaying validation error */
 
 .invalid-feedback {
