@@ -1,1 +1,1 @@
-web: gunicorn emerald_eye.wsgi:application
+web: gunicorn shop.wsgi:application
