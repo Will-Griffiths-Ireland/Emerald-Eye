@@ -14,6 +14,19 @@ Steps:
 
 Result: Pass
 
+Scenario: The user checks that all sub elements of the interface display correctly
+
+1. Brand Logo: Verify that the brand logo is displayed in the top left corner of the navbar.
+2. Index Page: Verify that the index page is accessible and displays the appropriate content.
+3. Cart Page: Verify that the cart page is accessible and displays the appropriate content.
+4. Store Link: Verify that the “Store” link in the navbar is accessible and lists artwork.
+5. Registration Link: If the user is not signed in, verify that the “Registration” link in the navbar is accessible.
+6. Sign In Link: If the user is not signed in, verify that the “Sign In” link in the navbar is accessible.
+7. Admin Link: If the user is signed in as a site admin, verify that the “Admin” link in the navbar is accessible.
+8. 404 Error Page: Verify that the 404 error page is accessible and displays the appropriate content.
+
+Result: Pass
+
 ## Adding Art to Cart
 
 Scenario: The user clicks the 'Add to Cart' button and the artwork is added to their cart.
