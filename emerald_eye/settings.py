@@ -26,8 +26,7 @@ if os.path.exists("env.py"):
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = "DEV" in os.environ
-DEBUG = True
+DEBUG = "DEV" in os.environ
 
 ALLOWED_HOSTS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','localhost',
                  'https://emerald-eye-d7829689bf6e.herokuapp.com/','emerald-eye-d7829689bf6e.herokuapp.com']
