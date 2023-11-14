@@ -169,15 +169,6 @@ class DeleteCartItem(UserPassesTestMixin, DeleteView):
         messages.success(request, 'Item removed from your cart')
         return redirect('cart')
     
-#class ProcessOrder(ListView):
-
-#     send_mail(
-#     "Order Complete",
-#     "Here is the message.",
-#     "No_Reply@Emerald_Eye.com",
-#     ["williamgriffithsireland@hotmail.com"],
-#     fail_silently=False,
-# )
     
 def create_checkout_session(request):
 
@@ -202,15 +193,51 @@ def create_checkout_session(request):
             'quantity': 1,
         }],
         mode='payment',
+        customer_email=request.user.email,
         payment_method_types = ['card'],
         # PROD CODE
-        # success_url = domain_name + '/shop',
+        # success_url = domain_name + '/order_complete?session_id={CHECKOUT_SESSION_ID}',
         # cancel_url = domain_name + '/cart',
         # TEST CODE
-        success_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/shop',
-        cancel_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev//cart',
+        success_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/order_complete?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url = 'https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/cart',
+        metadata={"order_id": order.id },
         )
     except Exception as e:
         return redirect('cart')
 
     return redirect(checkout_session.url, code=303)
+
+def order_complete(request):
+    """ complete order screen"""
+
+    session_id = request.GET.get("session_id")
+    session = stripe.checkout.Session.retrieve(session_id)
+
+    customer_email = session.customer_email
+    order_id = session.metadata.get("order_id")
+
+    order = Order.objects.get(id=order_id)
+
+    image_urls = []
+    for item in order.orderitem_set.all():
+        image_urls.append(request.build_absolute_uri(item.item.full_quality_image.url))
+
+    email_content = f"Thanks for your order today!\n Here are the high res versions for you to enjoy:\n\n"
+    for url_link in image_urls:
+        email_content += f"{url_link}\n\n"
+
+    send_mail(
+    "Order Number - #" + order_id + " Complete - Imag",
+    email_content,
+    "No_Reply@Emerald_Eye.com",
+    [customer_email],
+    fail_silently=True,
+)
+
+    # Update the order to complete
+    
+    order.complete = True
+    order.save()
+
+    return render(request, 'shop/order_complete.html', {"customer_email": customer_email, "order_id": order_id})

@@ -1,0 +1,15 @@
+{% extends "includes/core.html" %}
+{% load static %}
+{% block page_title %}Order Complete{% endblock %}
+{% block content %}
+<div class="center_screen">
+    <h1 class="text-center p-2">
+        Thanks for your purchase
+    </h1>
+    <div class="container d-flex flex-row flex-wrap justify-content-center fade-in-group">
+     <p> Order - {{ order_id }} by {{customer_email }}</p>
+
+    </div>
+</div>
+   
+{% endblock %}

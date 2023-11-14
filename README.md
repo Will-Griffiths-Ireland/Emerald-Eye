@@ -14,6 +14,11 @@ Emerald Eye takes care of everything for you. Our inovative digital first approa
 
 Emerald Eye is the perfect opportunity for you to turn your passion into profit. Join Emerald Eye today and let the world see Ireland through your eyes. 
 
+** **NOTE** **
+
+This site is purely a demo and no charges are incurred.
+To make a test purchase use the card number 4242424242424242 with any future expiry date and any 3 numbers for the ccv
+
 ## Commercial Viability (Business Model) 
 
 People like good photos, they tell stories, they stir emotions, they connect us with things we love. 
@@ -36,9 +41,13 @@ The overall design of the site is tailored towards minilism and focusing on the 
 
 ### Wireframes
 
-The site follows a classic approach and the wireframes were the intitial concept
+The site follows a classic approach and the wireframes were the intitial concept that I knew would align with a trnaditional store format and would be qucik to implement with bootstrap.
+
+The pdf can be found here
 
 ### Color Schemes
+
+The colour scheme of the site leans heavily on the colours of the Irish flag
 
 Green - #385723
 White = #ffffff

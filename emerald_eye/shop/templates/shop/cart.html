@@ -24,8 +24,10 @@
 {% endfor %}
 </table>
 <div class="container d-flex flex-row align-items-center justify-content-center fade-in-group">
+  {% if items %}
   <p> Total Order Price : € {{ total_price|floatformat:2 }} </p>
   <p><a href="{% url 'process_payment' %}" class="btn btn-success m-3"> Complete Order </a></p>
+  {% endif %}
 </div>
 </div>
 {% endblock %}
