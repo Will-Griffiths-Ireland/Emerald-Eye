@@ -77,4 +77,19 @@ I landed on using the 'Lilita One' font, it really just came from testing out mu
 
 ### Order Confirmation & Digital Delivery
 
+## Deployment
+
+### Deploying to Heroku
+
+Create a Heroku account: If you don’t already have a Heroku account, go to heroku.com and sign up for a free account.
+
+Create a new app: Once you’re logged in to your Heroku account, click the “New” button in the top right corner of the dashboard and select “Create new app”. Give your app a name and select a region.
+
+Connect your GitHub repository: In the “Deploy” tab of your app dashboard, scroll down to the “Deployment method” section and select “GitHub”. Connect your GitHub account and select the repository you want to deploy.
+
+Configure automatic deploys: In the “Automatic deploys” section, select the branch you want to deploy automatically. Whenever you push changes to this branch, Heroku will automatically build and deploy your app.
+
+Deploy your app: In the “Manual deploy” section, select the branch you want to deploy and click the “Deploy Branch” button. Heroku will build and deploy your app.
+
+View your app: Once your app is deployed, you can view it by clicking the “View” button in the top right corner of the dashboard.
 

@@ -156,6 +156,11 @@ footer a {
     text-decoration: none;
     color: inherit;
 }
+.sales-image {
+    max-width: 3vw;
+    object-fit: scale-down;
+    align-self: center;
+}
 
 /* ###### CART STYLING ###### */
 

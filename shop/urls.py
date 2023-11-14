@@ -7,6 +7,7 @@ urlpatterns = [
     path("art_edit/<slug:pk>/", EditArt.as_view(), name="art_edit"),
     path("art_delete/<slug:pk>/", DeleteArt.as_view(), name="art_delete"),
     path('shop/', ArtList.as_view(), name="shop"),
+    path('sales/', ArtSales.as_view(), name="sales"),
     path('shop_search/', ArtSearch.as_view(), name="shop_search"),
     path('art_detail/<slug:pk>/', ArtDetail.as_view(), name="art_detail"),
     path('', views.index, name="index"),

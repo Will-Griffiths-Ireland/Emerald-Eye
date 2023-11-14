@@ -43,6 +43,22 @@ class ArtList(ListView):
             ).order_by('-date_added')
         return artwork
     
+class ArtSales(ListView):
+    """
+    View all available art
+    """
+
+    template_name = "shop/sales.html"
+    model = Artwork
+    context_object_name = "artwork"
+
+    # Return only available art
+    def get_queryset(self, **kwargs):
+        artwork = self.model.objects.filter(
+                Q(available='True')
+            ).order_by('-sales')
+        return artwork
+    
 class ArtSearch(ListView):
     """
     View all available art based on user search
@@ -222,9 +238,9 @@ def create_checkout_session(request):
 def order_complete(request):
     """ complete order screen"""
 
+    # take the stripe session id and collect information on this order
     session_id = request.GET.get("session_id")
     session = stripe.checkout.Session.retrieve(session_id)
-
     customer_email = session.customer_email
     order_id = session.metadata.get("order_id")
 
@@ -232,7 +248,11 @@ def order_complete(request):
 
     image_urls = []
     for item in order.orderitem_set.all():
+        # build array of links to send to the customer
         image_urls.append(request.build_absolute_uri(item.item.full_quality_image.url))
+        # Increase the sales record for that piece of art
+        item.item.sales = item.item.sales + 1
+        item.item.save()
 
     email_content = f"Thanks for your order today!\n Here are the high res versions for you to enjoy:\n\n"
     for url_link in image_urls:
