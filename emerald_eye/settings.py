@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','localhost',
-                 'https://emerald-eye-d7829689bf6e.herokuapp.com/']
+                 'https://emerald-eye-d7829689bf6e.herokuapp.com/','emerald-eye-d7829689bf6e.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','https://localhost:8000',
                         'https://emerald-eye-d7829689bf6e.herokuapp.com/']
