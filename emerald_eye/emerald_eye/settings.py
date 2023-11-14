@@ -28,9 +28,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEV" in os.environ
 
-ALLOWED_HOSTS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','localhost']
+ALLOWED_HOSTS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','localhost',
+                 'https://emerald-eye-d7829689bf6e.herokuapp.com/']
 
-CSRF_TRUSTED_ORIGINS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','https://localhost:8000',]
+CSRF_TRUSTED_ORIGINS = ['https://organic-space-lamp-9rp659xvp5pc76rx-8000.app.github.dev/','https://localhost:8000',
+                        'https://emerald-eye-d7829689bf6e.herokuapp.com/']
 SITE_ID = 1
 # Application definition
 
@@ -46,7 +48,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'shop',
-    'emerald_eye',
 ]
 
 MIDDLEWARE = [
