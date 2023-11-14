@@ -222,8 +222,8 @@ def create_checkout_session(request):
         mode='payment',
         customer_email=request.user.email,
         payment_method_types = ['card'],
-        success_url = domain_name + '/order_complete?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url = domain_name + '/cart',
+        success_url = 'https://emerald-eye-d7829689bf6e.herokuapp.com/order_complete?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url = 'https://emerald-eye-d7829689bf6e.herokuapp.com/cart',
         metadata={"order_id": order.id },
         )
     except Exception as e:
