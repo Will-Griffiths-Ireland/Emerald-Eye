@@ -98,7 +98,7 @@ The site might be simple but packs in all the critical features to enable a succ
 * Platform for future deals and showcases
 * Splash image is to make the sites purpose clear
 
-![splash](assets/docs/splash.png)
+![splash](assets/docs/home.png)
 
 ### Account Management
 
@@ -150,14 +150,39 @@ The site might be simple but packs in all the critical features to enable a succ
 
 ### Purchase List (Cart)
 
+* The users cart displays all the current items they have and the prices/total
+* The user can remove items
+* The user can complete the purchase
+
+![cart](assets/docs/cart.png)
+
 ### Payment
 
-Payment is handle via stripe and the price is calcualted based on all the
+* Payment is handled via stripe and the price is calcualted based on all the items in the cart
+* The user email address is passed to the checkout
+
+To make a test purchase use the card number 4242424242424242 with any future expiry date and any 3 numbers for the ccv
 
 ### Order Confirmation & Digital Delivery
 
+* The user will be sent back to the site and the success page that confirms the order was processed.
+* The order gets marked completed
+* The items have their sales increased
+* An email is sent to the user which confirms the purchase 
 
+### Sales Report
 
+* I created a basic reporting page as an example of future enhancements
+* It displays all the art by the number of sales
+
+![sales](assets/docs/sales_report.png)
+
+## Marketing
+
+* The site has a related facebook page
+* A call to action in the footer asks users to follow on facebook for the newsletter
+
+![bookface](assets/docs/facebook.png)
 
 ## Testing
 
@@ -174,7 +199,7 @@ All details on testing can be found [here](TESTING.md)
 * CSS 3
 * Javascript
 * DrawSQL
-* Paint.net
+* Adobe photoshop
 * MS Powerpoint
 * Heroku
 * stripe.com
@@ -219,15 +244,15 @@ This repo is built on template the code institue developed (.devcontainer) that 
 
 ## Future Enhancements
 
-* Full encrption of all user journal and profile information
-* Ability to search users based on their description words
-* Ability to follow other users and have a dedicated page view of their pages, while keeping the experince passive and unintrusive
-* Profile can set preference for color and font
+* The site is MVP so there is lots of room for improvement
+* Exception and error handling would need work
+* Sales Coupons
+* Possible artist accounts with staff moderation
+* Advanced finance and profit distribution
 
 
+## Credits
 
-## Credits and Thanks
-
-All test images used were my own
-Bing was used to create the splash image on the index page 
+* All test images used were my own
+* AI was used to create the splash image on the index page 
 
