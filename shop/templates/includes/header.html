@@ -2,7 +2,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <img class="nav_logo" src="{% static 'images/logo.webp'%}">
+    <img class="nav_logo" src="{% static 'images/logo.webp'%}" alt="Brand Logo">
     <a class="navbar-brand" href="#">EMERALD EYE</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
 
         {% if request.user.is_authenticated and request.user.is_staff%}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Staff Pages
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,7 +54,7 @@
                         aria-label="Search">
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
-      <a href="{% url 'cart' %}"target="_self" rel="noopener" aria-label="Link - Opens list of art selected for purchase"><img class="nav_cart" src="{% static 'images/image_cart.webp'%}" ></a>
+      <a href="{% url 'cart' %} "target="_self" rel="noopener" aria-label="Link - Opens list of art selected for purchase"><img class="nav_cart" src="{% static 'images/image_cart.webp'%}" alt="Cart Image"></a>
     </div>
   </div>
 </nav>
