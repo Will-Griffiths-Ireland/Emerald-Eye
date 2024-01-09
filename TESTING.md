@@ -67,3 +67,15 @@
 ### Bugs & Known Issues
 
 There are no bugs or known issues at this time
+
+#### Feedback from project submission called out the following
+
+Admin email being hardcoded to checkout - unclear what this was in relation to - confirmed again in testing that emails are being sent to the user that is authenticated - I confirmed this in tests and in the sent items in the related gmail account for the site.
+
+Mention of an incorrect postcode during checkout leading to an error - unable to reproduce - checkout stripe is not collecting any address information since delivery is digital only
+
+Product with a negative value - this was partially intentional as I was planning to add coupon that reduced the orders price - I tested and was able to add items with negative values and they reduced the order price when added to the cart - Its not possible to checkout with just a coupon image - This was a partially implmenmted feature I should have removed - since it was not called out directly as part of the fail, I have left it as is.
+
+The specific fail reason was the lack of a newsletter management feature - I researched mailchimp and implmented that - tested that the popup shows at the desired intervals and also added a direct link for users to sign up at any time.
+
+

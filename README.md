@@ -183,7 +183,9 @@ To make a test purchase use the card number 4242424242424242 with any future exp
 
 * The site has a related facebook page
 * A call to action in the footer asks users to follow on facebook for the newsletter
-* Newletter service implmented with Mailchimp, onscreen pop-up calling for signup and also a link to signup in the page footer
+* Newletter service implemented with Mailchimp, onscreen pop-up calling for signup and also a link to signup in the page footer
+
+![letternews](assets/docs/newsletter.png)
 
 ![bookface](assets/docs/facebook.png)
 
